@@ -6,7 +6,7 @@ export type ExpertVideo = {
 };
 
 export interface SupadataResponse {
-  status: string;
+  status?: string;
   content?: SupadataContent[];
   error?: SupadataError;
   lang?: string;
@@ -14,8 +14,8 @@ export interface SupadataResponse {
 }
 
 export interface SupadataError {
-  error: string;
-  message: string;
+  error?: string;
+  message?: string;
   details?: any;
   documentation_url?: string;
 }
