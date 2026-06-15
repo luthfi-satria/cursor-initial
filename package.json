@@ -1,0 +1,33 @@
+{
+  "name": "cursor-initial",
+  "version": "1.0.0",
+  "description": "The following core tools and extensions were successfully integrated into the development workspace:",
+  "main": "index.js",
+  "dependencies": {
+    "@supadata/js": "^1.4.0",
+    "dotenv": "^17.4.2",
+    "youtube-captions-scraper": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.22.4",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fetch": "npx tsx src/fetch-transcripts.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luthfi-satria/cursor-initial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/luthfi-satria/cursor-initial/issues"
+  },
+  "homepage": "https://github.com/luthfi-satria/cursor-initial#readme"
+}

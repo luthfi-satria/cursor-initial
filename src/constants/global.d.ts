@@ -1,0 +1,1 @@
+export const BASE_SUPADATA = 'https://api.supadata.ai/v1';
