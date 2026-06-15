@@ -5,19 +5,23 @@
   "main": "index.js",
   "dependencies": {
     "@supadata/js": "^1.4.0",
+    "axios": "^1.8.4",
+    "cheerio": "^1.2.0",
     "dotenv": "^17.4.2",
     "youtube-captions-scraper": "^2.0.1"
   },
   "devDependencies": {
     "@types/node": "^20.11.0",
     "@types/youtube-captions-scraper": "^1.0.0",
+    "puppeteer": "^24.10.2",
     "ts-node": "^10.9.2",
     "tsx": "^4.22.4",
     "typescript": "^5.3.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "fetch": "npx tsx src/fetch-transcripts.ts"
+    "fetch": "npx tsx src/fetch-transcripts.ts",
+    "fetch-linkedin": "npx tsx src/fetch-linkedin.ts"
   },
   "repository": {
     "type": "git",

@@ -14,12 +14,12 @@ import { SupadataGetTranscript } from './libs/supadata.js';
 import { expertVideos } from './data/experts.js';
 
 async function fetchFromSupadata(expert: ExpertVideo): Promise<void> {
-  const { authorName, videoId } = expert;
+  const { name, videoId } = expert;
   
-  const targetDir = path.resolve('research', 'youtube-transcripts', authorName);
+  const targetDir = path.resolve('research', 'youtube-transcripts', name);
 
   try {
-    console.log(`⏳ Fetching transcript for [${authorName}]...`);
+    console.log(`⏳ Fetching transcript for [${name}]...`);
     
     const fullTranscript = await SupadataGetTranscript(videoId, { retries: 3 });
     if (fullTranscript) {
@@ -28,14 +28,14 @@ async function fetchFromSupadata(expert: ExpertVideo): Promise<void> {
       }
 
       fs.writeFileSync(path.join(targetDir, `${videoId}.txt`), fullTranscript, 'utf-8');
-      console.log(`✅ Success: Saved research/youtube-transcripts/${authorName}/${videoId}.txt`);
+      console.log(`✅ Success: Saved research/youtube-transcripts/${name}/${videoId}.txt`);
     } else {
       throw new Error('Invalid response structure from Supadata API');
     }
 
   } catch (error: any) {
     const msg = error?.response?.data?.message || error?.message || String(error);
-    console.error(`❌ Failed [${authorName}] (${videoId}):`, msg);
+    console.error(`❌ Failed [${name}] (${videoId}):`, msg);
   }
 }
 

@@ -10,8 +10,6 @@ if (!process.env.SUPADATA_API_KEY) {
 
 const supadata = new Supadata({ apiKey: process.env.SUPADATA_API_KEY || '' });
 
-async function delay(ms: number){ return new Promise(r=>setTimeout(r, ms)); }
-
 export async function SupadataGetTranscript(videoId: string, opts?: { retries?: number }): Promise<string | null> {
     const videoUrl = `${BASE_YOUTUBE}${videoId}`;
 

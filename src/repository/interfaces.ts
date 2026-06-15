@@ -1,6 +1,7 @@
 export type ExpertVideo = {
-  authorName: string;
+  name: string;
   videoId: string;
+  topic: string;
   title?: string;
   publishedAt?: string;
 };
